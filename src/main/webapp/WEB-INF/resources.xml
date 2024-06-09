@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <Resource id="teeds" type="DataSource">
+        JdbcDriver org.h2.Driver
+        JdbcUrl jdbc:h2:./data/tee
+        UserName sa
+        Password
+        JtaManaged true
+    </Resource>
+</resources>
+
+
