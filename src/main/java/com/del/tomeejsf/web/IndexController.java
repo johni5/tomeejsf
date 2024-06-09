@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+import javax.inject.Inject;
 import java.util.List;
 
 /**
@@ -19,7 +20,7 @@ public class IndexController {
 
     private static final Logger log = Logger.getLogger(IndexController.class);
 
-    @EJB
+    @Inject
     private CityManager cityManager;
 
     private List<City> rows;
