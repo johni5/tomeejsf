@@ -21,10 +21,11 @@
 <h:body>
     <h:form>
 
-        <h:panelGrid columns="3">
+        <h:panelGrid columns="4">
             <h:outputText value="Название"/>
             <h:inputText id="name" value="#{indexController.name}"/>
             <a4j:commandButton value="Создать" execute="name" render="table name" action="#{indexController.add}"/>
+            <a4j:commandButton value="Update" execute="@this" render="@form"/>
         </h:panelGrid>
 
         <br/>
@@ -44,6 +45,18 @@
                 </a4j:commandButton>
             </rich:column>
         </rich:dataTable>
+
+        <h:panelGroup id="tabs" layout="block" style="padding-top: 10px">
+            <rich:tabPanel switchType="ajax">
+                <rich:tab header="Tab 1">
+                    <h:outputText value="#{indexController.tab1}"/>
+                </rich:tab>
+                <rich:tab header="Tab 2">
+                    <h:outputText value="#{indexController.tab2}"/>
+                </rich:tab>
+            </rich:tabPanel>
+
+        </h:panelGroup>
 
     </h:form>
 </h:body>

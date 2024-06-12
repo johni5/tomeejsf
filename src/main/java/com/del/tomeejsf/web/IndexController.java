@@ -4,7 +4,6 @@ import com.del.tomeejsf.db.City;
 import com.del.tomeejsf.server.CityManager;
 import org.apache.log4j.Logger;
 
-import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
@@ -26,10 +25,19 @@ public class IndexController {
     private List<City> rows;
     private String name;
     private Long selectedId;
+    private String tab1 = "Привет";
+    private String tab2 = "Мир";
 
     public IndexController() {
     }
 
+    public String getTab1() {
+        return tab1;
+    }
+
+    public String getTab2() {
+        return tab2;
+    }
 
     public List<City> getRows() {
         if (rows == null) {
